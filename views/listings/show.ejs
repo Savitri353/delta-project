@@ -101,7 +101,7 @@
 
                                                 </p>
                                             </div>
-                                            <% if(currentUser) {%>
+                                            <% if(currentUser._id.equals(author._id)) {%>
                                                 <form method="POST"
                                                     action="/listings/<%= listing._id %>/reviews/<%=review._id %>?_method=delete">
                                                     <button class="btn btn-dark mb-3 mt-3">Delete</button>
