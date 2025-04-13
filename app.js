@@ -33,7 +33,7 @@ main()
 });
 
 async function main() {
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(dbUrl); //mongoose atlas
 }
 
 app.use(methodOverride("_method"));
