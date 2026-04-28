@@ -60,14 +60,17 @@
     const input = form.querySelector(".search-inp");
 
     form.addEventListener("submit", function (e) {
-      e.preventDefault();
+      e.preventDefault(); // Stop the normal form refresh
 
-      const country = input.value.trim();
+      const search = input.value.trim();
 
-      if (country) {
-        // Send the country as a query parameter in the URL
-        window.location.href = `/listings?country=${encodeURIComponent(country)}`;
-      } 
+      if (search) {
+        // Redirect to URL with search query
+        window.location.href = `/listings?search=${encodeURIComponent(search)}`;
+      } else {
+        // If input is empty, go to all listings
+        window.location.href = `/listings`;
+      }
     });
   });
 </script>

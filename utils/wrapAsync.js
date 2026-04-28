@@ -5,4 +5,4 @@
 };
 
 //A function who takes an argument called function.
-//which returns a function, who executes our func which is in parameter.//try catch
+//which returns a function, who executes our func which is in parameter.//instead of try catch we use wrapAsync to make code cleaner.
